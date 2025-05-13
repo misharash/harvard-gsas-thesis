@@ -26,7 +26,7 @@ this is to create an appendix chapter for each thesis chapter and dump them all
 into =appendix.tex=.
 
 *** Class options
-=gsasthesis.cls= is extends the standard report class, and passes all options to
+=gsasthesis.cls= extends the standard report class, and passes all options to
 report. Therefore, options =12pt=, =10pt=, =draft=, =a4paper=, etc behave like
 in the =report= class.
 
