@@ -127,11 +127,13 @@
 \chapter*{Introduction}\label{ch:intro}
 \input{intro}
 
-
-\chapter{Hook\footnote{Co-authored with my advisor}}\label{ch:1}
+% \texorpdfstring{#1}{#2} allows to remove/change certain parts in the PDF
+% bookmarks/table of contents, often handy for math, but also footnotes
+% like here
+\chapter{Hook\texorpdfstring{\footnote{Co-authored with my advisor}}{}}\label{ch:1}
 \input{chapter1}
 
-\chapter{Line\footnote{Co-authored with my other advisor}}\label{ch:2}
+\chapter{Line\texorpdfstring{\footnote{Co-authored with my other advisor}}{}}\label{ch:2}
 \input{chapter2}
 
 \chapter{Sinker}\label{ch:3}
