@@ -61,6 +61,8 @@
 \newcommand{\thesistitlepage}{%
   \begin{titlepage}
     \thispagestyle{empty}
+    \phantomsection % this creates the anchor for addcontentsline, otherwise it points somewhere else
+    \addcontentsline{toc}{section}{Title page}
     \null\vfil
     %\addcontentsline{toc}{section}{Title Page} % seems silly to add it
     \begin{center}
@@ -87,6 +89,8 @@
 \newcommand{\copyrightpage}
 {
   \thispagestyle{empty}
+  \phantomsection % this creates the anchor for addcontentsline, otherwise it points somewhere else
+  \addcontentsline{toc}{section}{Copyright}
   \null\vfil
   \begin{center}
     \copyright\ \@degreeyear\ \@author\\
@@ -99,6 +103,8 @@
 \renewenvironment{abstract}%
 {
   \clearpage
+  \phantomsection % this creates the anchor for addcontentsline, otherwise it points somewhere else
+  \addcontentsline{toc}{section}{Abstract}
   % Standard spacing for the header
   \begin{spacing}{1.2}
     \begin{minipage}[t]{0.7\textwidth}
@@ -121,7 +127,6 @@
     \end{center}
     \vspace{2em}
   \end{spacing}
-  \addcontentsline{toc}{section}{Abstract}
   \section*{\centering \abstractname}
 }%
 {\clearpage}
@@ -137,18 +142,26 @@
 % Redefine them
 \renewcommand{\tableofcontents}%
 {
+  \phantomsection % this creates the anchor for addcontentsline, otherwise it points somewhere else
+  \addcontentsline{toc}{section}{Contents}
   \begin{spacing}{1.2} % 1.2 looks nicer than 1
     \LaTeXTOC
   \end{spacing}
 }
 \renewcommand{\listoftables}%
 {
+  \clearpage
+  \phantomsection % this creates the anchor for addcontentsline, otherwise it points somewhere else
+  \addcontentsline{toc}{section}{List of Tables}
   \begin{spacing}{1.2}
     \LaTeXLOT
   \end{spacing}
 }
 \renewcommand{\listoffigures}%
 {
+  \clearpage
+  \phantomsection % this creates the anchor for addcontentsline, otherwise it points somewhere else
+  \addcontentsline{toc}{section}{List of Figures}
   \begin{spacing}{1.2}
     \LaTeXLOF
   \end{spacing}
@@ -158,6 +171,7 @@
 \newenvironment{acknowledgments}
 {
   \clearpage
+  \phantomsection % this creates the anchor for addcontentsline, otherwise it points somewhere else
   \addcontentsline{toc}{section}{Acknowledgments}
   \section*{\centering Acknowledgments}
 }
@@ -166,6 +180,8 @@
 \newenvironment{dedication}
 {
   \clearpage
+  \phantomsection % this creates the anchor for addcontentsline, otherwise it points somewhere else
+  \addcontentsline{toc}{section}{Dedication}
   \par\vspace*{.2\textheight}
   \begin{quotation}
 }
