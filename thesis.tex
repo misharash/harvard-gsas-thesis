@@ -125,8 +125,15 @@
 % Introductory chapter. Comment out if you don't have an intro chapter, but I
 % think most committees expect you to have one.
 % Don't number the intro chapter, but add to to the table of contents
+\phantomsection
 \addcontentsline{toc}{chapter}{Introduction}
-\chapter*{Introduction}\label{ch:intro}
+\chapter*{Introduction}
+% Alternatively, one can number the intro chapter
+% Not numbering it does not seem to be among the formatting requirements (2025)
+% If you want to number sections within the introduction, you probably should
+% let the introduction be Chapter 1 (otherwise these sections will be 0.X)
+% \chapter{Introduction}
+\label{ch:intro}
 \input{intro}
 
 % \texorpdfstring{#1}{#2} allows to remove/change certain parts in the PDF
