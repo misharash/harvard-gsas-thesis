@@ -11,7 +11,7 @@
 % If you want asymmetric margins for two-sided documents, use the "twoside"
 % option, as in
 % \usepackage[top=1in,bottom=1.5in,left=1in,right=1.5in,twoside]{geometry} The
-% left and right options become inner and outer margins The default horizontal
+% left and right options become inner and outer margins. The default horizontal
 % latex margin ratio is 2:3. The default vertical top:bottom margin ratio is 2:3
 % also. You can also set it directly by passing the hmarginratio option to the
 % geometry package, as in
@@ -50,7 +50,7 @@
 \usepackage{microtype}
 
 % You need the footmisc package with the stable option if you want to have
-% footnotes inside section titles, for example to say that a particular chapter
+% footnotes inside section titles, for example, to say that a particular chapter
 % has been co-authored with someone. The multiple option ensures that there is a
 % comma between two consecutive footnotes
 \usepackage[stable,multiple]{footmisc}
@@ -86,7 +86,7 @@
 
 \pagenumbering{roman} % GSAS wants roman page numbers for frontmatter
 
-% the following four pages are required in that order. The first two pages are
+% The following four pages are required in that order. The first two pages are
 % not allowed to have page numbers, this is taken care of in the class file.
 \thesistitlepage
 \copyrightpage
@@ -104,7 +104,7 @@
 \tableofcontents % Table of contents
 
 % The rest of the front matter: Lists of tables, figures, dedication and
-% acknowledment is optional. Comment out whatever you don't like
+% acknowledments are optional. Comment out whatever you don't like
 \listoftables
 \listoffigures
 \begin{acknowledgments}
@@ -139,14 +139,14 @@
 
 % Put appendices, bibliography, and supplemental materials here
 
-% The bibliography may be single spaced within each entry, but must be
+% The bibliography may be single-spaced within each entry, but must be
 % double-spaced between each entry. Most bibliography styles leave space between
 % entries, so that shouldn't be a problem.
 \begin{singlespacing}
   % I like "References" better than "Bibliography"
   \renewcommand{\bibname}{References}
 
-  % Any bibliohgraphy style that leaves space between entries is fine
+  % Any bibliography style that leaves space between entries is fine
   \bibliographystyle{ecca}
   \bibliography{references}
 \end{singlespacing}
